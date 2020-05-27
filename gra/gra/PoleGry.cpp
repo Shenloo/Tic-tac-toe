@@ -138,24 +138,26 @@ char SprawdzPole(char** pole_gry, int rozmiar_pola_gry, int ile_w_linii)
 
 	/* Sprawdzenie 'X' na przekatnych */
 	licznik = 1;
+	poprzedni = 0;
 	for (int i = 0; i < rozmiar_pola_gry; ++i)
 	{
 		if (x == pole_gry[i][i] && (poprzedni == x))
 			++licznik;
-		else if (x != pole_gry[i][i])
-			licznik = 1;
+		//else if (x != pole_gry[i][i])
+			//licznik = 1;
 		poprzedni = pole_gry[i][i];
 		if (licznik == ile_w_linii)
 			return x;
 	}
 
 	licznik = 1;
+	poprzedni = 0;
 	for (int i = 0; i < rozmiar_pola_gry; ++i)
 	{
 		if (x == pole_gry[(rozmiar_pola_gry - 1) - i][i] && (poprzedni == x))
 			++licznik;
-		else if (x != pole_gry[(rozmiar_pola_gry - 1) - i][i])
-			licznik = 1;
+		//else if (x != pole_gry[(rozmiar_pola_gry - 1) - i][i])
+			//licznik = 1;
 		poprzedni = pole_gry[(rozmiar_pola_gry - 1) - i][i];
 		if (licznik == ile_w_linii)
 			return x;
@@ -163,24 +165,26 @@ char SprawdzPole(char** pole_gry, int rozmiar_pola_gry, int ile_w_linii)
 
 	/* Sprawdzenie'O' na przekatnych */
 	licznik = 1;
+	poprzedni = 0;
 	for (int i = 0; i < rozmiar_pola_gry; ++i)
 	{
 		if (o == pole_gry[i][i] && (poprzedni == o))
 			++licznik;
-		else if (o != pole_gry[i][i])
-			licznik = 1;
+		//else if (o != pole_gry[i][i])
+			//licznik = 1;
 		poprzedni = pole_gry[i][i];
 		if (licznik == ile_w_linii)
 			return o;
 	}
 
 	licznik = 1;
+	poprzedni = 0;
 	for (int i = 0; i < rozmiar_pola_gry; ++i)
 	{
 		if (o == pole_gry[(rozmiar_pola_gry - 1) - i][i] && (poprzedni == o))
 			++licznik;
-		else if (o != pole_gry[(rozmiar_pola_gry - 1) - i][i])
-			licznik = 1;
+		//else if (o != pole_gry[(rozmiar_pola_gry - 1) - i][i])
+			//licznik = 1;
 		poprzedni = pole_gry[(rozmiar_pola_gry - 1) - i][i];
 		if (licznik == ile_w_linii)
 			return o;
